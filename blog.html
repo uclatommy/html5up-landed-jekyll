@@ -1,0 +1,31 @@
+---
+layout: default
+---
+			{% include header.html %}
+<!-- Main -->
+<div id="main" class="wrapper style1">
+    <div class="container">
+        <header class="major">
+            <h2>My <strong>Blog</strong></h2>
+            <p>Ipsum dolor feugiat aliquam tempus sed magna lorem consequat accumsan</p>
+        </header>
+        <!-- Content -->
+        <section id="content">
+            <p>
+                {% for post in site.posts %}
+                <div class="wrapper {% if forloop.first %} style2 {% else %} style1 {% endif %}">
+                    <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+                    {{ post.excerpt }}
+                    <section class="special">
+                        <ul class="actions">
+                            <li><a href="{{ site.baseurl }}{{ post.url }}" class="button">Read more</a></li>
+                        </ul>
+                    </section>
+                </div>
+                    {% endfor %}
+            </p>
+        </section>
+    </div>
+</div>
+
+            {% include footer.html %}
