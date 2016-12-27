@@ -11,9 +11,9 @@ layout: default
         </header>
         <!-- Content -->
         <section id="content">
-            <p>
+            <article>
                 {% for post in site.posts %}
-                <div class="wrapper {% if forloop.first %} style2 {% else %} style1 {% endif %}">
+                <div class="wrapper {% if forloop.first %} style0 {% else %} style1 {% endif %}">
                     <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
                     {{ post.excerpt }}
                     <section class="special">
@@ -23,7 +23,7 @@ layout: default
                     </section>
                 </div>
                     {% endfor %}
-            </p>
+            </article>
         </section>
     </div>
 </div>
